@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#065f46"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="620" cy="240" r="160" fill="#10b981" opacity="0.12"/>
+  <g transform="translate(500, 115) scale(5.5)" fill="none" stroke="url(#iconGrad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+    <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/>
+  </g>
+  <text x="48" y="56" fill="#6ee7b7" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600">AI / ML · HEALTHCARE</text>
+  <text x="48" y="130" fill="#f8fafc" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="700">Medic For You</text>
+  <text x="48" y="178" fill="#94a3b8" font-family="Inter,Arial,sans-serif" font-size="17">AI Medical Assistant</text>
+</svg>

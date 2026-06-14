@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="620" cy="240" r="160" fill="#0ea5e9" opacity="0.15"/>
+  <g transform="translate(515, 125) scale(5.8)" fill="none" stroke="url(#iconGrad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 8V4H8"/>
+    <rect width="16" height="12" x="4" y="8" rx="2"/>
+    <path d="M2 14h2"/><path d="M20 14h2"/>
+    <path d="M15 13v2"/><path d="M9 13v2"/>
+  </g>
+  <text x="48" y="56" fill="#7dd3fc" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600">AI / ML</text>
+  <text x="48" y="130" fill="#f8fafc" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="700">NEXUS AI</text>
+  <text x="48" y="178" fill="#94a3b8" font-family="Inter,Arial,sans-serif" font-size="17">AI Chatbot Platform</text>
+</svg>

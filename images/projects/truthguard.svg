@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#450a0a"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="100%" stop-color="#f87171"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="620" cy="240" r="160" fill="#ef4444" opacity="0.12"/>
+  <g transform="translate(510, 115) scale(5.8)" fill="none" stroke="url(#iconGrad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+    <path d="m9 12 2 2 4-4"/>
+  </g>
+  <text x="48" y="56" fill="#fca5a5" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600">AI / ML · SECURITY</text>
+  <text x="48" y="130" fill="#f8fafc" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="700">TruthGuard AI</text>
+  <text x="48" y="178" fill="#94a3b8" font-family="Inter,Arial,sans-serif" font-size="17">Misinformation Detection</text>
+</svg>

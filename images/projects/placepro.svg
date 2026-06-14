@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="620" cy="240" r="160" fill="#6366f1" opacity="0.15"/>
+  <g transform="translate(520, 130) scale(6)" fill="none" stroke="url(#iconGrad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+    <rect width="20" height="14" x="2" y="6" rx="2"/>
+  </g>
+  <text x="48" y="56" fill="#a5b4fc" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600">AI / ML</text>
+  <text x="48" y="130" fill="#f8fafc" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="700">PlacePro AI</text>
+  <text x="48" y="178" fill="#94a3b8" font-family="Inter,Arial,sans-serif" font-size="17">Placement Prep Platform</text>
+</svg>

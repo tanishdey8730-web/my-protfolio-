@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="620" cy="240" r="160" fill="#22c55e" opacity="0.12"/>
+  <g transform="translate(505, 115) scale(5.5)" fill="none" stroke="url(#iconGrad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 7v14"/>
+    <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
+  </g>
+  <text x="48" y="56" fill="#86efac" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600">SIH 2025 · FULL STACK</text>
+  <text x="48" y="130" fill="#f8fafc" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="700">Sharda Setu</text>
+  <text x="48" y="178" fill="#94a3b8" font-family="Inter,Arial,sans-serif" font-size="17">Low-Bandwidth EdTech</text>
+</svg>

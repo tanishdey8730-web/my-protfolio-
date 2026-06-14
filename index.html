@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shantanu Dey — B.Tech CSE student, Full Stack Developer, Data Analyst & AI Enthusiast. Python, React, Machine Learning. Portfolio with projects, certifications & experience.">
+  <meta name="keywords" content="Shantanu Dey, Full Stack Developer, React, TypeScript, AI, Portfolio">
+  <meta name="author" content="Shantanu Dey">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="Shantanu Dey | Full Stack Developer Portfolio">
+  <meta property="og:description" content="Computer Science Engineer passionate about building impactful products through Full Stack Development, AI, and Data Analytics.">
+  <meta property="og:image" content="images/profile.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Shantanu Dey | Full Stack Developer</title>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="gradient-text" style="font-size:2.5rem;font-weight:700">Shantanu</div>
+    <p style="color:var(--text-muted);font-size:0.875rem;margin-top:0.5rem">Loading portfolio...</p>
+    <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+  </div>
+
+  <div id="scroll-progress"></div>
+
+  <div class="bg-effects" id="bg-effects">
+    <div class="bg-aurora bg-aurora-1"></div>
+    <div class="bg-aurora bg-aurora-2"></div>
+    <div class="bg-light-sweep"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-spotlight" id="bg-spotlight"></div>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+    <div class="bg-orb bg-orb-5"></div>
+  </div>
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo"><span class="gradient-text">Shantanu</span><span style="color:var(--text-muted)">.</span></a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="cmd-btn" id="cmd-open" type="button">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 3a3 3 0 00-3 3v12a3 3 0 003 3 3 3 0 003-3 3 3 0 00-3-3H6a3 3 0 00-3 3 3 3 0 003 3 3 3 0 003-3V6a3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3h12a3 3 0 003-3 3 3 0 00-3-3z"/></svg>
+          Ctrl+K
+        </button>
+        <button class="icon-btn" id="theme-btn" type="button" aria-label="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="icon-btn" id="menu-btn" type="button" aria-label="Menu" style="display:flex">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu glass-strong" id="mobile-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#github">GitHub</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="reveal visible">
+          <div class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z"/></svg>
+            Available for opportunities
+          </div>
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name"><span class="gradient-text">Shantanu Dey</span></h1>
+          <div class="typing-line"><span id="typing-text"></span><span class="typing-cursor">|</span></div>
+          <p class="hero-desc" id="hero-summary"></p>
+          <div class="coding-platforms-badge reveal visible" id="coding-badge">🏆 LeetCode · HackerRank · GeeksforGeeks</div>
+          <div class="btn-row">
+            <button type="button" class="btn btn-primary" id="resume-open-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Download Resume
+            </button>
+            <a href="#contact" class="btn btn-outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+              Contact Me
+            </a>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/tanishdey8730-web" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/shantanu-dey-86715b284" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:shantanudey.dev@gmail.com" class="social-link" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </a>
+          </div>
+          <div class="location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kolkata, India
+          </div>
+        </div>
+        <div class="hero-card-wrap reveal visible">
+          <button type="button" class="hero-card hero-card-trigger glass-strong" id="profile-trigger" aria-label="Open 3D profile card">
+            <div class="hero-profile">
+              <div class="avatar">
+                <img id="profile-photo" src="images/profile.png" alt="Shantanu Dey" width="320" height="320">
+              </div>
+              <p class="hero-profile-name">Shantanu Dey</p>
+              <p class="hero-profile-role">Full Stack Developer · Data Analyst</p>
+              <span class="hero-card-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+                Click for 3D view
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down">
+        Scroll Down
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Professional Summary</span>
+          <h2 class="section-title">Crafting Digital Excellence</h2>
+          <p class="section-subtitle">Software engineering, data analytics, and web development for data-driven impact</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card glass reveal">
+            <p style="line-height:1.7;color:var(--text-muted);margin-bottom:1.5rem" id="about-summary"></p>
+            <div class="highlights" id="about-highlights"></div>
+          </div>
+          <div class="stats-grid" id="stats-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Education</span>
+          <h2 class="section-title">Academic Background</h2>
+          <p class="section-subtitle">Building a strong foundation in computer science and problem solving</p>
+        </div>
+        <div class="education-list" id="education-list"></div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Technical Skills</span>
+          <h2 class="section-title">Technical Arsenal</h2>
+          <p class="section-subtitle">Programming, web development, data analysis, and core engineering skills</p>
+        </div>
+        <div class="skills-grid" id="skills-grid"></div>
+        <div class="soft-skills-section reveal">
+          <h3 class="soft-skills-title">Soft Skills</h3>
+          <div class="soft-skills-grid" id="soft-skills-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Experience</span>
+          <h2 class="section-title">Professional Journey</h2>
+          <p class="section-subtitle">Building expertise through real-world projects and internships</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          <div id="timeline"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Projects</span>
+          <h2 class="section-title">Featured Work</h2>
+          <p class="section-subtitle">A showcase of projects spanning AI, full stack development, and data science</p>
+        </div>
+        <div class="project-toolbar reveal">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" id="project-search" placeholder="Search projects..." aria-label="Search projects">
+          </div>
+          <div class="filter-row">
+            <button class="filter-btn active" data-cat="All">All</button>
+            <button class="filter-btn" data-cat="AI/ML">AI/ML</button>
+            <button class="filter-btn" data-cat="Full Stack">Full Stack</button>
+            <button class="filter-btn" data-cat="Data Science">Data Science</button>
+          </div>
+        </div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- GitHub -->
+    <section class="section" id="github">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">GitHub</span>
+          <h2 class="section-title">Open Source Activity</h2>
+          <p class="section-subtitle">Contributions, repositories, and coding consistency</p>
+        </div>
+        <div class="github-grid">
+          <div class="github-chart glass reveal">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+              <h3 style="font-weight:600">Contribution Graph</h3>
+              <a href="https://github.com/tanishdey8730-web" target="_blank" rel="noopener" style="font-size:0.875rem;color:var(--primary-light)">@tanishdey8730-web</a>
+            </div>
+            <img src="https://ghchart.rshah.org/tanishdey8730-web" alt="GitHub contribution graph" loading="lazy">
+          </div>
+          <div class="stat-cards">
+            <div class="stat-row glass reveal"><div class="stat-icon" style="background:rgba(37,99,235,0.2);color:#2563EB"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 01-9 9"/></svg></div><div><div style="font-size:1.5rem;font-weight:700">13+</div><div style="font-size:0.875rem;color:var(--text-muted)">Repositories</div></div></div>
+            <div class="stat-row glass reveal"><div class="stat-icon" style="background:rgba(251,191,36,0.2);color:#FBBF24"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><div style="font-size:1.5rem;font-weight:700">128+</div><div style="font-size:0.875rem;color:var(--text-muted)">Total Stars</div></div></div>
+            <div class="stat-row glass reveal"><div class="stat-icon" style="background:rgba(249,115,22,0.2);color:#F97316"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg></div><div><div style="font-size:1.5rem;font-weight:700">45 days</div><div style="font-size:0.875rem;color:var(--text-muted)">Current Streak</div></div></div>
+          </div>
+        </div>
+        <div class="glass reveal" id="lang-section" style="margin-top:1.5rem;padding:1.5rem;border-radius:1rem">
+          <h3 style="font-weight:600;margin-bottom:1.5rem">Top Languages</h3>
+          <div id="lang-bars"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coding Profiles -->
+    <section class="section" id="profiles">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Coding Profiles</span>
+          <h2 class="section-title">Problem Solving</h2>
+          <p class="section-subtitle" id="coding-badge-sub">🏆 LeetCode · HackerRank · GeeksforGeeks</p>
+        </div>
+        <div class="profiles-grid" id="profiles-grid"></div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Certifications</span>
+          <h2 class="section-title">Professional Credentials</h2>
+          <p class="section-subtitle">22+ certifications from IBM, Coursera, Deloitte, XPMC, Code With Harry & University of Colorado Boulder</p>
+        </div>
+        <div class="cert-slider">
+          <div class="cert-card glass" id="cert-card"></div>
+          <div class="cert-controls">
+            <button class="icon-btn" id="cert-prev" type="button" aria-label="Previous">‹</button>
+            <span id="cert-counter" style="font-size:0.875rem;color:var(--text-muted);min-width:4rem;text-align:center">1 / 22</span>
+            <button class="icon-btn" id="cert-next" type="button" aria-label="Next">›</button>
+          </div>
+          <div class="cert-dots" id="cert-dots" style="display:none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Achievements</span>
+          <h2 class="section-title">Beyond the Code</h2>
+          <p class="section-subtitle">Sports excellence, leadership, music, and professional credentials</p>
+        </div>
+        <div class="cards-4" id="achievements-grid"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Testimonials</span>
+          <h2 class="section-title">What People Say</h2>
+          <p class="section-subtitle">Feedback from mentors, professors, and colleagues</p>
+        </div>
+        <div class="testimonials-grid" id="testimonials-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">Have a project in mind or want to discuss opportunities? I'd love to hear from you.</p>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-item glass reveal">
+              <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+              <div><p style="font-size:0.75rem;color:var(--text-muted)">Email</p><a href="mailto:shantanudey.dev@gmail.com">shantanudey.dev@gmail.com</a></div>
+            </div>
+            <div class="contact-item glass reveal">
+              <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+              <div><p style="font-size:0.75rem;color:var(--text-muted)">Phone</p><a href="tel:+919876543210">+91 98765 43210</a></div>
+            </div>
+            <div class="contact-item glass reveal">
+              <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><p style="font-size:0.75rem;color:var(--text-muted)">Location</p><p>Kolkata, India</p></div>
+            </div>
+            <div class="contact-item glass reveal">
+              <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div>
+              <div><p style="font-size:0.75rem;color:var(--text-muted)">GitHub</p><a href="https://github.com/tanishdey8730-web" target="_blank" rel="noopener">github.com/tanishdey8730-web</a></div>
+            </div>
+            <div class="contact-item glass reveal">
+              <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <div><p style="font-size:0.75rem;color:var(--text-muted)">LinkedIn</p><a href="https://www.linkedin.com/in/shantanu-dey-86715b284" target="_blank" rel="noopener">linkedin.com/in/shantanu-dey</a></div>
+            </div>
+          </div>
+          <form class="contact-form glass reveal" id="contact-form">
+            <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required placeholder="Your name"></div>
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="your@email.com"></div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" required placeholder="Tell me about your project or opportunity..."></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+            <p class="form-msg" id="form-msg"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="gradient-text" style="font-size:1.25rem;margin-bottom:0.5rem">Shantanu Dey</h3>
+          <p style="font-size:0.875rem;color:var(--text-muted)">Building impactful products through code, AI, and data.</p>
+        </div>
+        <div>
+          <h4 style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem">Quick Links</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
+            <a href="#home" style="font-size:0.875rem;color:var(--text-muted)">Home</a>
+            <a href="#about" style="font-size:0.875rem;color:var(--text-muted)">About</a>
+            <a href="#skills" style="font-size:0.875rem;color:var(--text-muted)">Skills</a>
+            <a href="#projects" style="font-size:0.875rem;color:var(--text-muted)">Projects</a>
+            <a href="#github" style="font-size:0.875rem;color:var(--text-muted)">GitHub</a>
+            <a href="#contact" style="font-size:0.875rem;color:var(--text-muted)">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.75rem">Connect</h4>
+          <a href="mailto:shantanudey.dev@gmail.com" style="display:block;font-size:0.875rem;color:var(--text-muted);margin-bottom:0.5rem">shantanudey.dev@gmail.com</a>
+          <a href="https://www.linkedin.com/in/shantanu-dey-86715b284" target="_blank" rel="noopener" style="display:block;font-size:0.875rem;color:var(--text-muted);margin-bottom:0.5rem">LinkedIn</a>
+          <a href="https://github.com/tanishdey8730-web" target="_blank" rel="noopener" style="display:block;font-size:0.875rem;color:var(--text-muted)">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Shantanu Dey. All rights reserved.</p>
+        <p>Built with ❤️ using HTML, CSS & JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" type="button" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Command Palette -->
+  <div id="command-palette">
+    <div class="palette-box glass-strong">
+      <div class="palette-search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="palette-input" placeholder="Search pages, projects, actions..." aria-label="Command search">
+      </div>
+      <div class="palette-results" id="palette-results"></div>
+    </div>
+  </div>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay glass-strong" id="project-modal">
+    <div class="modal glass-strong" id="modal-content"></div>
+  </div>
+
+  <!-- 3D Profile Card -->
+  <div class="profile-3d-overlay" id="profile-3d-modal" aria-hidden="true">
+    <button type="button" class="profile-3d-close" id="profile-3d-close" aria-label="Close 3D profile">✕</button>
+    <p class="profile-3d-hint">Move mouse to rotate · Press Esc to close</p>
+    <div class="profile-3d-scene" id="profile-3d-scene">
+      <div class="profile-3d-card" id="profile-3d-card">
+        <div class="profile-3d-shine" id="profile-3d-shine"></div>
+        <div class="profile-3d-inner glass-strong" id="profile-3d-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Preview -->
+  <div class="resume-overlay" id="resume-modal" aria-hidden="true">
+    <div class="resume-modal glass-strong">
+      <div class="resume-modal-header">
+        <div>
+          <h2 class="resume-modal-title">Resume Preview</h2>
+          <p class="resume-modal-sub">Shantanu Dey · PDF</p>
+        </div>
+        <button type="button" class="resume-modal-close" id="resume-close" aria-label="Close resume preview">✕</button>
+      </div>
+      <div class="resume-preview">
+        <iframe id="resume-frame" title="Shantanu Dey Resume" loading="lazy"></iframe>
+      </div>
+      <div class="resume-modal-actions">
+        <a href="resume.pdf" class="btn btn-primary" id="resume-download-link" download="Resume_Shantanu_Dey.pdf">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Chat -->
+  <button id="chat-toggle" type="button" aria-label="Open chat">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+  </button>
+  <div id="chat-panel" class="glass-strong">
+    <div class="chat-header">
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <div style="width:2rem;height:2rem;border-radius:0.5rem;background:rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center">🤖</div>
+        <div><p style="font-size:0.875rem;font-weight:600">Portfolio AI</p><p style="font-size:0.75rem;color:var(--text-muted)">Ask me anything</p></div>
+      </div>
+      <button id="chat-close" type="button" aria-label="Close chat" style="background:none;border:none;cursor:pointer;color:var(--text-muted)">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot">Hi! I'm Shantanu's portfolio assistant. Ask me about his skills, projects, or experience!</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask about Shantanu...">
+      <button class="chat-send" id="chat-send" type="button" aria-label="Send">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
