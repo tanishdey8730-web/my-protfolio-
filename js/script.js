@@ -37,8 +37,9 @@ const PORTFOLIO = {
   name: 'Shantanu Dey',
   roles: ['Computer Science Engineer', 'Full Stack Developer', 'Data Analyst', 'AI Enthusiast', 'Problem Solver'],
   summary: 'Computer Science Engineering undergraduate with proficiency in Python, SQL, HTML, CSS, JavaScript, and experience in building web applications and statistical analysis. Skilled in data cleaning, visualization, and web development with proven success in delivering actionable insights from academic projects. Eager to apply software engineering, analytical, web development, and problem-solving skills to support data-driven decision-making.',
-  email: 'shantanudey.dev@gmail.com',
-  phone: '+91 98765 43210',
+  email: 'tanishdey8730@gmail.com',
+  phone: '+91 6033110140',
+  phoneTel: '+916033110140',
   location: 'Kolkata, India',
   resumeUrl: 'resume.pdf',
   resumeDownloadName: 'Resume_Shantanu_Dey.pdf',
@@ -252,6 +253,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
   renderAbout();
+  renderContactInfo();
   renderEducation();
   renderStats();
   renderSkills();
@@ -278,6 +280,28 @@ function init() {
   initCounters();
   initProfile3d();
   initResumeModal();
+}
+
+function renderContactInfo() {
+  const mailto = `mailto:${PORTFOLIO.email}`;
+  const heroEmail = document.getElementById('hero-email-link');
+  const contactEmail = document.getElementById('contact-email-link');
+  const contactPhone = document.getElementById('contact-phone-link');
+  const footerEmail = document.getElementById('footer-email-link');
+
+  if (heroEmail) heroEmail.href = mailto;
+  if (contactEmail) {
+    contactEmail.href = mailto;
+    contactEmail.textContent = PORTFOLIO.email;
+  }
+  if (contactPhone) {
+    contactPhone.href = `tel:${PORTFOLIO.phoneTel}`;
+    contactPhone.textContent = PORTFOLIO.phone;
+  }
+  if (footerEmail) {
+    footerEmail.href = mailto;
+    footerEmail.textContent = PORTFOLIO.email;
+  }
 }
 
 function renderAbout() {
