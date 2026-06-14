@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Shantanu Dey — Developer Portfolio (HTML)
 
 A premium, recruiter-focused developer portfolio built with pure HTML, CSS, and JavaScript.
@@ -56,3 +57,6 @@ Upload all files to GitHub Pages, Netlify, or any static hosting:
 ---
 
 Built by **Shantanu Dey**
+=======
+# my-protfolio-
+>>>>>>> 64c4b7e0858bd9830ab20d5221dd6118c09ba6e3
